@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Luca Carloni – Full-Stack Developer e studente di Ingegneria Informatica. Portfolio, progetti GitHub e CV." />
+  <title>Luca Carloni – Full-Stack Developer</title>
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════════════════ -->
+<header id="lc-navbar" class="lc-nav" role="banner">
+  <div class="nav-inner">
+
+    <a href="#home" class="nav-logo" aria-label="Home">luca<span>.</span>dev</a>
+
+    <nav class="nav-links" aria-label="Navigazione principale">
+      <a href="#home">Home</a>
+      <a href="#about">Chi Sono</a>
+      <a href="#projects">Progetti</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contatti</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="https://github.com/carloni2021" target="_blank" rel="noopener noreferrer"
+         class="nav-icon-btn" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/luca-carloni-8a9328214/" target="_blank" rel="noopener noreferrer"
+         class="nav-icon-btn" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <a href="assets/Carloni_Luca_CV.pdf" download="Carloni_Luca_CV.pdf"
+         class="btn-cv" aria-label="Scarica CV">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Scarica CV
+      </a>
+      <button id="hamburger" class="nav-hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav id="mobile-menu" class="nav-mobile" aria-label="Menu mobile">
+  <a href="#home">Home</a>
+  <a href="#about">Chi Sono</a>
+  <a href="#projects">Progetti</a>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#contact">Contatti</a>
+  <a href="https://github.com/carloni2021" target="_blank" rel="noopener noreferrer">GitHub →</a>
+  <a href="https://www.linkedin.com/in/luca-carloni-8a9328214/" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
+  <a href="assets/Carloni_Luca_CV.pdf" download="Carloni_Luca_CV.pdf">⬇ Scarica CV</a>
+</nav>
+
+
+<!-- ════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════ -->
+<section id="home" class="hero" aria-labelledby="hero-heading">
+  <div class="hero-inner">
+
+    <div class="hero-text">
+      <div class="hero-tag">Disponibile per opportunità</div>
+
+      <h1 id="hero-heading" class="hero-name">
+        Ciao, sono<br/><span class="accent">Luca Carloni</span>
+      </h1>
+
+      <p class="hero-title">
+        // <span id="typing-text">Full-Stack Developer</span><span class="typing-cursor" aria-hidden="true"></span>
+      </p>
+
+      <p class="hero-bio">
+        Studente di Informatica con la passione per costruire prodotti digitali ben progettati.
+        Amo lavorare su sistemi distribuiti, API scalabili e interfacce pulite.
+        Cerco sempre di scrivere codice che sia non solo funzionante, ma elegante.
+      </p>
+
+      <div class="hero-actions">
+        <a href="https://github.com/carloni2021" target="_blank" rel="noopener noreferrer" class="btn-primary">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          Vedi su GitHub
+        </a>
+        <a href="assets/Carloni_Luca_CV.pdf" download="Carloni_Luca_CV.pdf" class="btn-secondary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Scarica CV
+        </a>
+        <a href="#contact" class="btn-secondary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Contattami
+        </a>
+      </div>
+
+      <div class="hero-socials" aria-label="Social">
+        <a href="https://github.com/carloni2021" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          carloni2021
+        </a>
+        <span class="sep" aria-hidden="true"></span>
+        <a href="https://www.linkedin.com/in/luca-carloni-8a9328214/" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          luca-carloni
+        </a>
+      </div>
+    </div>
+
+    <!-- Foto profilo -->
+    <div class="hero-photo-wrap" aria-hidden="true">
+      <div class="hero-photo-card">
+        <img src="assets/img/foto-profilo.jpg"
+             alt="Foto profilo di Luca Carloni"
+             width="300" height="350" />
+      </div>
+      <div class="hero-status">Aperto a collaborazioni</div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════
+     ABOUT
+════════════════════════════════════════════════════ -->
+<section id="about" class="section" aria-labelledby="about-heading">
+  <div class="section-inner">
+    <p class="section-label">Chi sono</p>
+    <div class="about-grid">
+
+      <div class="about-text reveal">
+        <h2 id="about-heading" class="section-title">Sviluppatore con curiosità da ingegnere</h2>
+        <p>
+          Sono <strong>Luca Carloni</strong>, studente magistrale di Cybersecurity, macroarea Ingegneria Informatica presso l'Università degli studi di Tor Vergata con una forte
+          inclinazione verso lo sviluppo full-stack e i sistemi distribuiti. Mi appassiona l'esplorazione spaziale e gli aspetti di scalabilità delle architetture cloud che ho avuto modo di toccare con mano utilizzando Amazon Web Service
+        </p>
+        <p>
+          Nel tempo libero contribuisco a progetti open source, esploro nuovi stack tecnologici e
+          lavoro su side project che spaziano da applicazioni web a strumenti da linea di comando.
+        </p>
+        <p>
+          Ho esperienza con progetti accademici complessi su <strong>sistemi operativi</strong>,
+          <strong>architetture orientate ai servizi</strong> e <strong>sistemi distribuiti e cloud</strong>.
+          Lavoro bene in team, con Git e metodologie agili.
+        </p>
+
+        <div class="about-stats" role="list">
+          <div class="stat-card" role="listitem">
+            <span class="num">5+</span>
+            <span class="label">Progetti GitHub</span>
+          </div>
+          <div class="stat-card" role="listitem">
+            <span class="num">3+</span>
+            <span class="label">Anni di studio</span>
+          </div>
+          <div class="stat-card" role="listitem">
+            <span class="num">∞</span>
+            <span class="label">Caffè bevuti</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-grid reveal">
+        <p class="skill-group-title">// Backend & Systems</p>
+        <div class="skills-tags">
+          <span class="skill-tag highlight">Java</span>
+          <span class="skill-tag highlight">Python</span>
+          <span class="skill-tag">C / C++</span>
+          <span class="skill-tag">Go</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">REST API</span>
+          <span class="skill-tag">gRPC</span>
+        </div>
+        <p class="skill-group-title">// Frontend</p>
+        <div class="skills-tags">
+          <span class="skill-tag">HTML5</span>
+          <span class="skill-tag">CSS3</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">TypeScript</span>
+        </div>
+        <p class="skill-group-title">// Infrastructure & Tools</p>
+        <div class="skills-tags">
+          <span class="skill-tag highlight">Docker</span>
+          <span class="skill-tag">Git / GitHub</span>
+          <span class="skill-tag">Linux</span>
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">Redis</span>
+        </div>
+        <p class="skill-group-title">// Paradigmi & Architetture</p>
+        <div class="skills-tags">
+          <span class="skill-tag">SOA</span>
+          <span class="skill-tag">Microservizi</span>
+          <span class="skill-tag">Sistemi Distribuiti</span>
+          <span class="skill-tag">OOP</span>
+          <span class="skill-tag">Concorrenza</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ════════════════════════════════════════════════════
+     PROJECTS
+════════════════════════════════════════════════════ -->
+<section id="projects" class="section bg-surface" aria-labelledby="projects-heading">
+  <div class="section-inner">
+    <p class="section-label">Progetti selezionati</p>
+    <h2 id="projects-heading" class="section-title reveal">Cosa ho costruito</h2>
+    <p class="section-sub reveal">
+      Una selezione dei miei lavori più significativi tra universitari e personali.
+      Tutto il codice è disponibile su GitHub.
+    </p>
+
+    <div class="projects-grid">
+
+      <article class="project-card reveal">
+        <div class="project-header">
+          <div class="project-icon">⚙️</div>
+          <div class="project-links">
+            <a href="https://github.com/carloni2021/workflow_webapp" target="_blank" rel="noopener noreferrer" title="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </a>
+          </div>
+        </div>
+        <h3 class="project-name">Workflow Web App</h3>
+        <p class="project-desc">
+          Applicazione web per la gestione di workflow aziendali: definizione di processi,
+          assegnazione task e monitoraggio dello stato di avanzamento.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">Node.js</span>
+          <span class="project-tag">React</span>
+          <span class="project-tag">PostgreSQL</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-header">
+          <div class="project-icon">🐧</div>
+          <div class="project-links">
+            <a href="https://github.com/carloni2021/SyscallTableThrottling_SOA" target="_blank" rel="noopener noreferrer" title="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </a>
+          </div>
+        </div>
+        <h3 class="project-name">Syscall Table Throttling</h3>
+        <p class="project-desc">
+          Modulo kernel Linux per il throttling dinamico delle system call.
+          Progetto su architetture orientate ai servizi e programmazione di sistema a basso livello.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">C</span>
+          <span class="project-tag">Linux Kernel</span>
+          <span class="project-tag">SOA</span>
+          <span class="project-tag">OS</span>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="github-cta reveal">
+      <div class="github-cta-text">
+        <strong>Vuoi vedere altro?</strong>
+        <p>Tutti i miei progetti, contributi e repository sono disponibili sul profilo GitHub.</p>
+      </div>
+      <a href="https://github.com/carloni2021" target="_blank" rel="noopener noreferrer" class="btn-primary">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        Vai al profilo GitHub
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ════════════════════════════════════════════════════
+     PORTFOLIO SITI
+════════════════════════════════════════════════════ -->
+<section id="portfolio" class="section" aria-labelledby="portfolio-heading">
+  <div class="section-inner">
+    <p class="section-label">Portfolio siti</p>
+    <h2 id="portfolio-heading" class="section-title reveal">Siti realizzati</h2>
+    <p class="section-sub reveal">
+      Siti web sviluppati per clienti e collaborazioni esterne.
+    </p>
+
+    <div class="projects-grid">
+
+      <article class="project-card reveal">
+        <div class="project-header">
+          <div class="project-icon">🥋</div>
+          <div class="project-links">
+            <a href="https://site.sport-manager.net/" target="_blank" rel="noopener noreferrer" title="Vai al sito">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+        <h3 class="project-name">Sport Manager – Gestionale Gare WKSO</h3>
+        <p class="project-desc">
+          Piattaforma web realizzata in collaborazione con <strong>WKSO</strong> per la gestione
+          completa delle gare di karate: iscrizioni atleti, generazione tabelloni, gestione
+          risultati e classifiche in tempo reale. Usato attivamente nelle competizioni ufficiali.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">PHP</span>
+          <span class="project-tag">MySQL</span>
+          <span class="project-tag">JavaScript</span>
+          <span class="project-tag">WKSO</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ════════════════════════════════════════════════════
+     CONTACT
+════════════════════════════════════════════════════ -->
+<section id="contact" class="section" aria-labelledby="contact-heading">
+  <div class="section-inner">
+    <p class="section-label">Contatti</p>
+    <div class="contact-grid">
+
+      <div class="reveal">
+        <h2 id="contact-heading" class="section-title">Parliamoci</h2>
+        <p class="section-sub">
+          Sono disponibile per collaborazioni, stage, opportunità lavorative o semplicemente
+          per scambiare idee su tecnologia e progetti. Non esitare a scrivermi.
+        </p>
+
+        <div class="contact-links">
+          <a href="mailto:lucacarloni2001@gmail.com" class="contact-link-card">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="info">
+              <strong>Email</strong>
+              <span>lucacarloni2001@gmail.com</span>
+            </div>
+            <span class="arrow">→</span>
+          </a>
+          <a href="https://github.com/carloni2021" target="_blank" rel="noopener noreferrer" class="contact-link-card">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </div>
+            <div class="info">
+              <strong>GitHub</strong>
+              <span>github.com/carloni2021</span>
+            </div>
+            <span class="arrow">→</span>
+          </a>
+          <a href="https://www.linkedin.com/in/luca-carloni-8a9328214/" target="_blank" rel="noopener noreferrer" class="contact-link-card">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </div>
+            <div class="info">
+              <strong>LinkedIn</strong>
+              <span>luca-carloni-8a9328214</span>
+            </div>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="cv-card reveal">
+        <div class="cv-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <h3>Curriculum Vitae</h3>
+        <p>
+          Scarica il mio CV aggiornato in PDF. Include formazione, esperienze, competenze
+          tecniche e progetti principali — disponibile in italiano e inglese.
+        </p>
+        <a href="assets/Carloni_Luca_CV.pdf" download="Carloni_Luca_CV.pdf" class="btn-download">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Scarica CV (PDF)
+        </a>
+        <p style="margin-top:1rem;font-size:.78rem;color:var(--text-muted);font-family:var(--font-mono);">
+          Aggiornato · IT / EN
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════ -->
+<footer class="lc-footer" role="contentinfo">
+  <div class="footer-inner">
+    <p class="footer-copy">
+      © 2026 <span>Luca Carloni</span> · Fatto con ☕ e troppo terminale
+    </p>
+    <div class="footer-socials">
+      <a href="https://github.com/carloni2021" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/luca-carloni-8a9328214/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <a href="assets/Carloni_Luca_CV.pdf" download="Carloni_Luca_CV.pdf" aria-label="Scarica CV">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
