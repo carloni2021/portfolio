@@ -880,6 +880,83 @@ ul { list-style: none; }
   .hero-name { letter-spacing: -1px; }
 }
 
+/* ════════════════════════════════════════════════════
+   LANGUAGE TOGGLE BUTTON
+════════════════════════════════════════════════════ */
+.nav-lang-btn {
+  height: 36px;
+  padding: 0 .65rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  transition: all var(--transition);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.nav-lang-btn:hover {
+  background: var(--accent-dim);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Mobile toggles row */
+.mobile-toggles {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding-top: .5rem;
+  border-top: 1px solid var(--border);
+}
+
+/* ════════════════════════════════════════════════════
+   LIGHT THEME
+════════════════════════════════════════════════════ */
+[data-theme="light"] {
+  --bg-base:       #f4f7ff;
+  --bg-surface:    #eaefff;
+  --bg-card:       #ffffff;
+  --bg-card-hover: #f0f4ff;
+  --border:        rgba(79, 142, 255, 0.14);
+  --border-hover:  rgba(79, 142, 255, 0.38);
+  --text-primary:  #0d1526;
+  --text-secondary:#334466;
+  --text-muted:    #6272a0;
+}
+
+[data-theme="light"] .lc-nav {
+  background: rgba(244, 247, 255, 0.88);
+  border-bottom-color: rgba(79, 142, 255, 0.14);
+}
+
+[data-theme="light"] .nav-mobile {
+  background: var(--bg-surface);
+}
+
+[data-theme="light"] .hero::before {
+  background-image:
+    radial-gradient(ellipse 60% 60% at 70% 40%, rgba(79,142,255,.10) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 20% 60%, rgba(52,211,153,.07) 0%, transparent 60%);
+}
+
+[data-theme="light"] .hero::after { opacity: .18; }
+
+[data-theme="light"] .hero-photo-card {
+  box-shadow: 0 0 60px rgba(79,142,255,.08);
+}
+
+[data-theme="light"] ::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-track { background: var(--bg-base); }
+
 /* ── Reveal animation ── */
 .reveal {
   opacity: 0;

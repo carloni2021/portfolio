@@ -1,11 +1,20 @@
 <!DOCTYPE html>
-<html lang="it" class="scroll-smooth">
+<html lang="it" class="scroll-smooth" data-theme="dark" data-lang="it">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Luca Carloni – Full-Stack Developer e studente di Ingegneria Informatica. Portfolio, progetti GitHub e CV." />
   <title>Luca Carloni – Full-Stack Developer</title>
   <link rel="stylesheet" href="assets/css/main.css" />
+  <!-- Apply saved theme/lang immediately to avoid flash -->
+  <script>
+    (function() {
+      const t = localStorage.getItem('lc-theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+      const l = localStorage.getItem('lc-lang');
+      if (l) { document.documentElement.setAttribute('data-lang', l); document.documentElement.lang = l; }
+    })();
+  </script>
 </head>
 <body>
 
@@ -19,10 +28,10 @@
 
     <nav class="nav-links" aria-label="Navigazione principale">
       <a href="#home">Home</a>
-      <a href="#about">Chi Sono</a>
-      <a href="#projects">Progetti</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contatti</a>
+      <a href="#about" data-i18n="nav.about">Chi Sono</a>
+      <a href="#projects" data-i18n="nav.projects">Progetti</a>
+      <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
+      <a href="#contact" data-i18n="nav.contact">Contatti</a>
     </nav>
 
     <div class="nav-actions">
@@ -34,10 +43,22 @@
          class="nav-icon-btn" aria-label="LinkedIn">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
       </a>
+
+      <!-- Theme toggle -->
+      <button id="theme-toggle" class="nav-icon-btn" aria-label="Cambia tema">
+        <!-- Sun (shown in dark mode) -->
+        <svg id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <!-- Moon (shown in light mode) -->
+        <svg id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+
+      <!-- Language toggle -->
+      <button id="lang-toggle" class="nav-lang-btn" aria-label="Switch language">EN</button>
+
       <a href="assets/Carloni_Luca_CV.pdf" download="Carloni_Luca_CV.pdf"
          class="btn-cv" aria-label="Scarica CV">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Scarica CV
+        <span data-i18n="nav.cv">Scarica CV</span>
       </a>
       <button id="hamburger" class="nav-hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
         <span></span><span></span><span></span>
@@ -48,13 +69,20 @@
 
 <nav id="mobile-menu" class="nav-mobile" aria-label="Menu mobile">
   <a href="#home">Home</a>
-  <a href="#about">Chi Sono</a>
-  <a href="#projects">Progetti</a>
-  <a href="#portfolio">Portfolio</a>
-  <a href="#contact">Contatti</a>
+  <a href="#about" data-i18n="nav.about">Chi Sono</a>
+  <a href="#projects" data-i18n="nav.projects">Progetti</a>
+  <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
+  <a href="#contact" data-i18n="nav.contact">Contatti</a>
   <a href="https://github.com/carloni2021" target="_blank" rel="noopener noreferrer">GitHub →</a>
   <a href="https://www.linkedin.com/in/luca-carloni-8a9328214/" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
-  <a href="assets/Carloni_Luca_CV.pdf" download="Carloni_Luca_CV.pdf">⬇ Scarica CV</a>
+  <a href="assets/Carloni_Luca_CV.pdf" download="Carloni_Luca_CV.pdf" data-i18n="nav.cv.mobile">⬇ Scarica CV</a>
+  <div class="mobile-toggles">
+    <button id="theme-toggle-mobile" class="nav-icon-btn" aria-label="Cambia tema">
+      <svg id="icon-sun-m" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg id="icon-moon-m" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <button id="lang-toggle-mobile" class="nav-lang-btn" aria-label="Switch language">EN</button>
+  </div>
 </nav>
 
 
@@ -65,9 +93,9 @@
   <div class="hero-inner">
 
     <div class="hero-text">
-      <div class="hero-tag">Disponibile per opportunità</div>
+      <div class="hero-tag" data-i18n="hero.tag">Disponibile per opportunità</div>
 
-      <h1 id="hero-heading" class="hero-name">
+      <h1 id="hero-heading" class="hero-name" data-i18n="hero.name">
         Ciao, sono<br/><span class="accent">Luca Carloni</span>
       </h1>
 
@@ -75,7 +103,7 @@
         // <span id="typing-text">Full-Stack Developer</span><span class="typing-cursor" aria-hidden="true"></span>
       </p>
 
-      <p class="hero-bio">
+      <p class="hero-bio" data-i18n="hero.bio">
         Studente di Informatica con la passione per costruire prodotti digitali ben progettati.
         Amo lavorare su sistemi distribuiti, API scalabili e interfacce pulite.
         Cerco sempre di scrivere codice che sia non solo funzionante, ma elegante.
@@ -84,15 +112,15 @@
       <div class="hero-actions">
         <a href="https://github.com/carloni2021" target="_blank" rel="noopener noreferrer" class="btn-primary">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-          Vedi su GitHub
+          <span data-i18n="hero.cta.github">Vedi su GitHub</span>
         </a>
         <a href="assets/Carloni_Luca_CV.pdf" download="Carloni_Luca_CV.pdf" class="btn-secondary">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Scarica CV
+          <span data-i18n="hero.cta.cv">Scarica CV</span>
         </a>
         <a href="#contact" class="btn-secondary">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          Contattami
+          <span data-i18n="hero.cta.contact">Contattami</span>
         </a>
       </div>
 
@@ -116,7 +144,7 @@
              alt="Foto profilo di Luca Carloni"
              width="300" height="350" />
       </div>
-      <div class="hero-status">Aperto a collaborazioni</div>
+      <div class="hero-status" data-i18n="hero.status">Aperto a collaborazioni</div>
     </div>
 
   </div>
@@ -128,20 +156,20 @@
 ════════════════════════════════════════════════════ -->
 <section id="about" class="section" aria-labelledby="about-heading">
   <div class="section-inner">
-    <p class="section-label">Chi sono</p>
+    <p class="section-label" data-i18n="about.label">Chi sono</p>
     <div class="about-grid">
 
       <div class="about-text reveal">
-        <h2 id="about-heading" class="section-title">Sviluppatore con curiosità da ingegnere</h2>
-        <p>
+        <h2 id="about-heading" class="section-title" data-i18n="about.title">Sviluppatore con curiosità da ingegnere</h2>
+        <p data-i18n="about.p1">
           Sono <strong>Luca Carloni</strong>, studente magistrale di Cybersecurity, macroarea Ingegneria Informatica presso l'Università degli studi di Tor Vergata con una forte
           inclinazione verso lo sviluppo full-stack e i sistemi distribuiti. Mi appassiona l'esplorazione spaziale e gli aspetti di scalabilità delle architetture cloud che ho avuto modo di toccare con mano utilizzando Amazon Web Service
         </p>
-        <p>
+        <p data-i18n="about.p2">
           Nel tempo libero contribuisco a progetti open source, esploro nuovi stack tecnologici e
           lavoro su side project che spaziano da applicazioni web a strumenti da linea di comando.
         </p>
-        <p>
+        <p data-i18n="about.p3">
           Ho esperienza con progetti accademici complessi su <strong>sistemi operativi</strong>,
           <strong>architetture orientate ai servizi</strong> e <strong>sistemi distribuiti e cloud</strong>.
           Lavoro bene in team, con Git e metodologie agili.
@@ -150,15 +178,15 @@
         <div class="about-stats" role="list">
           <div class="stat-card" role="listitem">
             <span class="num">5+</span>
-            <span class="label">Progetti GitHub</span>
+            <span class="label" data-i18n="about.stat1">Progetti GitHub</span>
           </div>
           <div class="stat-card" role="listitem">
             <span class="num">3+</span>
-            <span class="label">Anni di studio</span>
+            <span class="label" data-i18n="about.stat2">Anni di studio</span>
           </div>
           <div class="stat-card" role="listitem">
             <span class="num">∞</span>
-            <span class="label">Caffè bevuti</span>
+            <span class="label" data-i18n="about.stat3">Caffè bevuti</span>
           </div>
         </div>
       </div>
@@ -213,9 +241,9 @@
 ════════════════════════════════════════════════════ -->
 <section id="projects" class="section bg-surface" aria-labelledby="projects-heading">
   <div class="section-inner">
-    <p class="section-label">Progetti selezionati</p>
-    <h2 id="projects-heading" class="section-title reveal">Cosa ho costruito</h2>
-    <p class="section-sub reveal">
+    <p class="section-label" data-i18n="projects.label">Progetti selezionati</p>
+    <h2 id="projects-heading" class="section-title reveal" data-i18n="projects.title">Cosa ho costruito</h2>
+    <p class="section-sub reveal" data-i18n="projects.sub">
       Una selezione dei miei lavori più significativi tra universitari e personali.
       Tutto il codice è disponibile su GitHub.
     </p>
@@ -231,8 +259,8 @@
             </a>
           </div>
         </div>
-        <h3 class="project-name">Workflow Web App</h3>
-        <p class="project-desc">
+        <h3 class="project-name" data-i18n="project1.name">Workflow Web App</h3>
+        <p class="project-desc" data-i18n="project1.desc">
           Applicazione web per la gestione di workflow aziendali: definizione di processi,
           assegnazione task e monitoraggio dello stato di avanzamento.
         </p>
@@ -252,8 +280,8 @@
             </a>
           </div>
         </div>
-        <h3 class="project-name">Syscall Table Throttling</h3>
-        <p class="project-desc">
+        <h3 class="project-name" data-i18n="project2.name">Syscall Table Throttling</h3>
+        <p class="project-desc" data-i18n="project2.desc">
           Modulo kernel Linux per il throttling dinamico delle system call.
           Progetto su architetture orientate ai servizi e programmazione di sistema a basso livello.
         </p>
@@ -269,12 +297,12 @@
 
     <div class="github-cta reveal">
       <div class="github-cta-text">
-        <strong>Vuoi vedere altro?</strong>
-        <p>Tutti i miei progetti, contributi e repository sono disponibili sul profilo GitHub.</p>
+        <strong data-i18n="projects.cta.text">Vuoi vedere altro?</strong>
+        <p data-i18n="projects.cta.sub">Tutti i miei progetti, contributi e repository sono disponibili sul profilo GitHub.</p>
       </div>
       <a href="https://github.com/carloni2021" target="_blank" rel="noopener noreferrer" class="btn-primary">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-        Vai al profilo GitHub
+        <span data-i18n="projects.cta.btn">Vai al profilo GitHub</span>
       </a>
     </div>
 
@@ -289,9 +317,9 @@
 ════════════════════════════════════════════════════ -->
 <section id="portfolio" class="section" aria-labelledby="portfolio-heading">
   <div class="section-inner">
-    <p class="section-label">Portfolio siti</p>
-    <h2 id="portfolio-heading" class="section-title reveal">Siti realizzati</h2>
-    <p class="section-sub reveal">
+    <p class="section-label" data-i18n="portfolio.label">Portfolio siti</p>
+    <h2 id="portfolio-heading" class="section-title reveal" data-i18n="portfolio.title">Siti realizzati</h2>
+    <p class="section-sub reveal" data-i18n="portfolio.sub">
       Siti web sviluppati per clienti e collaborazioni esterne.
     </p>
 
@@ -306,8 +334,8 @@
             </a>
           </div>
         </div>
-        <h3 class="project-name">Sport Manager – Gestionale Gare WKSO</h3>
-        <p class="project-desc">
+        <h3 class="project-name" data-i18n="p1.name">Sport Manager – Gestionale Gare WKSO</h3>
+        <p class="project-desc" data-i18n="p1.desc">
           Piattaforma web realizzata in collaborazione con <strong>WKSO</strong> per la gestione
           completa delle gare di karate: iscrizioni atleti, generazione tabelloni, gestione
           risultati e classifiche in tempo reale. Usato attivamente nelle competizioni ufficiali.
@@ -329,8 +357,8 @@
             </a>
           </div>
         </div>
-        <h3 class="project-name">Studio Nutrizionale – Sito Nutrizionista</h3>
-        <p class="project-desc">
+        <h3 class="project-name" data-i18n="p2.name">Studio Nutrizionale – Sito Nutrizionista</h3>
+        <p class="project-desc" data-i18n="p2.desc">
           Sito web professionale per uno studio nutrizionale: presentazione dei servizi,
           piani alimentari personalizzati, consulenze nutrizionali e sezione contatti.
           Design moderno e orientato alla conversione.
@@ -352,10 +380,10 @@
             </a>
           </div>
         </div>
-        <h3 class="project-name">Axiom Systems – Portale Consulenza ICT</h3>
-        <p class="project-desc">
+        <h3 class="project-name" data-i18n="p3.name">Axiom Systems – Portale Consulenza ICT</h3>
+        <p class="project-desc" data-i18n="p3.desc">
           Landing page B2B per una società di consulenza ICT: cloud architecture,
-          cybersecurity & hardening, full-stack development e digital transformation.
+          cybersecurity &amp; hardening, full-stack development e digital transformation.
           Codice modulare React con form di contatto validato lato client.
         </p>
         <div class="project-tags">
@@ -375,8 +403,8 @@
             </a>
           </div>
         </div>
-        <h3 class="project-name">Aequitas – Portale Consulenza Finanziaria</h3>
-        <p class="project-desc">
+        <h3 class="project-name" data-i18n="p4.name">Aequitas – Portale Consulenza Finanziaria</h3>
+        <p class="project-desc" data-i18n="p4.desc">
           Landing page B2B per una società di intermediazione creditizia: cessione del quinto,
           consolidamento debiti, prestiti e mutui. Include simulatore di rata interattivo,
           sezione compliance GDPR/OAM e form di lead generation.
@@ -401,12 +429,12 @@
 ════════════════════════════════════════════════════ -->
 <section id="contact" class="section" aria-labelledby="contact-heading">
   <div class="section-inner">
-    <p class="section-label">Contatti</p>
+    <p class="section-label" data-i18n="contact.label">Contatti</p>
     <div class="contact-grid">
 
       <div class="reveal">
-        <h2 id="contact-heading" class="section-title">Parliamoci</h2>
-        <p class="section-sub">
+        <h2 id="contact-heading" class="section-title" data-i18n="contact.title">Parliamoci</h2>
+        <p class="section-sub" data-i18n="contact.sub">
           Sono disponibile per collaborazioni, stage, opportunità lavorative o semplicemente
           per scambiare idee su tecnologia e progetti. Non esitare a scrivermi.
         </p>
@@ -449,14 +477,14 @@
         <div class="cv-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
         </div>
-        <h3>Curriculum Vitae</h3>
-        <p>
+        <h3 data-i18n="contact.cv.title">Curriculum Vitae</h3>
+        <p data-i18n="contact.cv.desc">
           Scarica il mio CV aggiornato in PDF. Include formazione, esperienze, competenze
           tecniche e progetti principali — disponibile in italiano e inglese.
         </p>
         <a href="assets/Carloni_Luca_CV.pdf" download="Carloni_Luca_CV.pdf" class="btn-download">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Scarica CV (PDF)
+          <span data-i18n="contact.cv.btn">Scarica CV (PDF)</span>
         </a>
         <p style="margin-top:1rem;font-size:.78rem;color:var(--text-muted);font-family:var(--font-mono);">
           Aggiornato · IT / EN
@@ -473,7 +501,7 @@
 ════════════════════════════════════════════════════ -->
 <footer class="lc-footer" role="contentinfo">
   <div class="footer-inner">
-    <p class="footer-copy">
+    <p class="footer-copy" data-i18n="footer.copy">
       © 2026 <span>Luca Carloni</span> · Fatto con ☕ e troppo terminale
     </p>
     <div class="footer-socials">
